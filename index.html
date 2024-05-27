@@ -384,13 +384,13 @@
 												}
 												function refreshCaptcha() {
 													const captcha = generateCaptcha();
-													document.getElementById('captcha-image').src = 'https://dummyimage.com/170x50/ffffff/000&text=' + captcha; // Set background color to white (ffffff)
+													document.getElementById('captcha-image').src = 'https://placehold.co/170x50/white/black?text=' + captcha; // Set background color to white (ffffff)
 												}
 
 												function validateCaptcha(event) {
 													event.preventDefault();
 													const userInput = document.getElementById('captcha-input').value;
-													const captcha = document.getElementById('captcha-image').src.split('&text=')[1];
+													const captcha = document.getElementById('captcha-image').src.split('=')[1];
 													const mobileInput = document.getElementById("mobile").value;
 
 													if (userInput === captcha) {
